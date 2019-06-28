@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix",
     "serve": "webpack -p && live-server ./public",
     "serve:dev": "webpack-dev-server --open",
-    "start": "npm run serve",
+    "start": "npm run serve:dev",
     "test": "echo \"No tests available\" && exit 0"
   },
   "repository": {
@@ -48,7 +48,9 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1"
   }
 }

@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 import { fetchMovies, fetchAdditionalInfo } from '../../actions';
 import MovieList from './MovieList';
 
-const mapStateToProps = (state) => ({
-    movies: Object.keys(state.movies).map((id) => state.movies[`${id}`])
-});
-
 class Movies extends Component {
 
     componentDidMount() {
@@ -37,5 +33,9 @@ Movies.propTypes = {
     fetchAdditionalInfo: PropTypes.func.isRequired,
     movies: PropTypes.arrayOf(PropTypes.object)
 };
+
+const mapStateToProps = (state) => ({
+    movies: Object.keys(state.movies).map((id) => state.movies[`${id}`])
+});
 
 export default connect(mapStateToProps, { fetchMovies, fetchAdditionalInfo })(Movies);

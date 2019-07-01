@@ -8,26 +8,26 @@ const DisplayTypeBlock = ({ changeViewType, viewType }) => {
     return (
         <div className="container d-flex justify-content-center mt-5">
             <TypeButton
-                primary={viewType === 'threeCard'}
-                icon="first-type"
-                onClick={() => changeViewType('threeCard')}
+                primary={viewType === 'threeRow'}
+                icon="three-row"
+                onClick={() => changeViewType('threeRow')}
             />
             <TypeButton
-                primary={viewType === 'twoCard'}
-                icon="two-type"
-                onClick={() => changeViewType('twoCard')}
+                primary={viewType === 'twoRow'}
+                icon="two-row"
+                onClick={() => changeViewType('twoRow')}
             />
             <TypeButton
-                primary={viewType === 'oneCard'}
-                icon="one-type"
-                onClick={() => changeViewType('oneCard')}
+                primary={viewType === 'column'}
+                icon="column"
+                onClick={() => changeViewType('column')}
             />
         </div>
     );
 };
 
 DisplayTypeBlock.defaultProps = {
-    viewType: 'threeCard' 
+    viewType: 'threeRow' 
 };
 
 DisplayTypeBlock.propTypes = {
@@ -35,4 +35,4 @@ DisplayTypeBlock.propTypes = {
     changeViewType: PropTypes.func.isRequired
 };
 
-export default connect((state) => ({ viewType: state.viewType }), { changeViewType  })(DisplayTypeBlock);
+export default connect((state) => ({ viewType: state.viewType }), { changeViewType })(DisplayTypeBlock);

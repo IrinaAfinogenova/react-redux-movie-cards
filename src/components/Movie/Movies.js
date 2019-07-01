@@ -4,11 +4,9 @@ import { connect } from 'react-redux';
 import { fetchMovies, fetchAdditionalInfo } from '../../actions';
 import MovieList from './MovieList';
 
-const mapStateToProps = (state) => {
-    return {
-        movies: Object.keys(state.movies).map((id) => state.movies[`${id}`])
-    };
-};
+const mapStateToProps = (state) => ({
+    movies: Object.keys(state.movies).map((id) => state.movies[`${id}`])
+});
 
 class Movies extends Component {
 

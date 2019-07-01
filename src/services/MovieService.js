@@ -2,7 +2,7 @@ import movies from './movies.json';
 import additionalInfo from './additionalInfo.json';
 
 const convertArrayToObject = (items) => items.reduce(
-    (acc, item) => Object.assign({}, acc, { [`${item.id}`]: item }),
+    (acc, item) => ({ ...acc, [`${item.id}`]: item}),
     {}
 );
 

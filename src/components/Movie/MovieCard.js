@@ -6,7 +6,7 @@ import StarRating from '../StarRating';
 const MovieCard = ({ viewType, movie }) => {
     return (
         <div className={`movie-card ${viewType}`}>
-            <div className={`movie-card card ${viewType} ${movie.addRating || ''}`}>
+            <div className={`movie-card card ${viewType} ${movie.additionalRating || ''}`}>
                 <img className="card-img-top" src={movie.imageUrl} alt="" />
                 <div className="card-body">
                     <h4 className="card-title">{movie.title}</h4>
@@ -31,7 +31,7 @@ MovieCard.defaultProps = {
 };
 
 MovieCard.defaultProps = {
-    viewType: 'threeCard'
+    viewType: 'threeRow'
 };
 
 MovieCard.propTypes = {

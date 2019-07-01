@@ -2,7 +2,7 @@ import { FETCH_MOVIES, CHANGE_VIEW_TYPE, FECTH_ADDITIONAL_INFO } from '../action
 
 const initialState = {
     movies: {},
-    viewType: 'threeCard'
+    viewType: 'threeRow'
 };
 
 export default (state = initialState, action) => {
@@ -17,9 +17,10 @@ export default (state = initialState, action) => {
     case FECTH_ADDITIONAL_INFO:      
         return {
             viewType: state.viewType,
-            movies: payload.reduce((acc, item) => {
-                return Object.assign(acc, {[item.movieId]: Object.assign(state.movies[item.movieId], { addRating: item.rating })});
-            }, state.movies) 
+            movies: payload.reduce(
+                (acc, item) =>({ ...acc, [item.movieId]: { ...state.movies[item.movieId], additionalRating: item.rating } }),
+                state.movies
+            )            
         };
     case CHANGE_VIEW_TYPE:
         return {

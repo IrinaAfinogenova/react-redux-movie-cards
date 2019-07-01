@@ -16,7 +16,7 @@ const TypeButton = ({ onClick, primary, icon }) => {
 
 TypeButton.defaultProps = {
     primary: false,
-    icon: 'first-type'
+    icon: 'three-row'
 };
 
 TypeButton.propTypes = {

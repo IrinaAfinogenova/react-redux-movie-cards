@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const TypeButton = ({ onClick, primary, icon }) => {
     return (
         <div
-            className={`btn ${primary ? 'btn-primary' : 'btn-secondary'} ml-1`}
+            className={`btn btn-outline-dark ${primary ? 'btn-primary' : 'btn-secondary'} ml-1`}
             onClick={onClick}
         >
-            <svg width="45" height="45" fill={primary ? 'gold' : 'black'}>
+            <svg width="45" height="45" fill={primary ? 'gold' : 'black'} className="icon">
                 <use xlinkHref={`#${icon}`} />
             </svg>
         </div>

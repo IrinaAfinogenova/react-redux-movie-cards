@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import StarRating from '../StarRating';
 
 const MovieCard = ({ viewType, movie }) => {
-    
     return (
         <div className={`movie-card ${viewType}`}>
             <div className={`movie-card card ${viewType} ${movie.addRating || ''}`}>

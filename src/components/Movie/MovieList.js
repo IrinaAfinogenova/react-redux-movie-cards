@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 
 const getMovies = (movies) => {
     return (
-        <div className="card-deck">
+        <div className="card-deck d-flex justify-content-center">
             {
                 movies.map(movie => <MovieCard key={movie.id} movie={movie} />)
             }

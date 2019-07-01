@@ -2,7 +2,7 @@ import { FETCH_MOVIES, CHANGE_VIEW_TYPE, FECTH_ADDITIONAL_INFO } from '../action
 
 const initialState = {
     movies: {},
-    viewType: 'oneCard'
+    viewType: 'threeCard'
 };
 
 export default (state = initialState, action) => {

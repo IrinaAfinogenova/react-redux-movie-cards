@@ -1,13 +1,10 @@
 import movies from './movies.json';
 import additionalInfo from './additionalInfo.json';
 
-const convertArrayToObject = (items) => items.reduce((acc, item) => {
-    const newItem = {
-        [`${item.id}`]: item
-    };
-
-    return Object.assign({}, acc, newItem);
-}, {});
+const convertArrayToObject = (items) => items.reduce(
+    (acc, item) => Object.assign({}, acc, { [`${item.id}`]: item }),
+    {}
+);
 
 export default class MovieService { 
     static getMovies() {

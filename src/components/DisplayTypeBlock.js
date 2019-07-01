@@ -6,7 +6,7 @@ import TypeButton from './TypeButton';
 
 const DisplayTypeBlock = ({ changeViewType, viewType }) => {
     return (
-        <div className="container justify-content-center btn-group ml-4 mt-4">
+        <div className="container d-flex justify-content-center mt-5">
             <TypeButton
                 primary={viewType === 'threeCard'}
                 icon="first-type"

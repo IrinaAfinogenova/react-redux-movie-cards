@@ -1,7 +1,7 @@
 import movies from './movies.json';
 import additionalInfo from './additionalInfo.json';
 
-const convertArrayToObject = (items) => items.reduce((acc={}, item) => { //TODO
+const convertArrayToObject = (items) => items.reduce((acc, item) => {
     const newItem = {
         [`${item.id}`]: item
     };
@@ -15,6 +15,6 @@ export default class MovieService {
     }
 
     static getAdditionalInfo() {
-        return additionalInfo ? convertArrayToObject(additionalInfo) : {};
+        return additionalInfo ? additionalInfo : [];
     }
 }

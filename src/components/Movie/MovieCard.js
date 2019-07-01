@@ -7,7 +7,7 @@ const MovieCard = ({ viewType, movie }) => {
     
     return (
         <div className={`movie-card ${viewType}`}>
-            <div className={`movie-card card ${viewType}`}>
+            <div className={`movie-card card ${viewType} ${movie.addRating || ''}`}>
                 <img className="card-img-top" src={movie.imageUrl} alt="" />
                 <div className="card-body">
                     <h4 className="card-title">{movie.title}</h4>

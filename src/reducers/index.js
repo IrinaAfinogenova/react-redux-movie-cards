@@ -5,8 +5,6 @@ const initialState = {
     viewType: 'oneCard'
 };
 
-//разобраться со spead оператором, видимо нельзя использовать ES6
-
 export default (state = initialState, action) => {
     const { type, payload } = action;
 
@@ -16,10 +14,12 @@ export default (state = initialState, action) => {
             viewType: state.viewType,
             movies: payload
         };
-    case FECTH_ADDITIONAL_INFO:
+    case FECTH_ADDITIONAL_INFO:      
         return {
             viewType: state.viewType,
-            movies: state.movies //TODO
+            movies: payload.reduce((acc, item) => {
+                return Object.assign(acc, {[item.movieId]: Object.assign(state.movies[item.movieId], { addRating: item.rating })});
+            }, state.movies) 
         };
     case CHANGE_VIEW_TYPE:
         return {

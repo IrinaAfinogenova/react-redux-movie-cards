@@ -19,6 +19,14 @@
     &.twoCard {
         height: 550px;
     }
+
+    &.gold {
+        border: 3px solid gold;
+    }
+
+    &.silver {
+        border: 3px solid silver;
+    }
 }
 
 .card-footer-badge {
